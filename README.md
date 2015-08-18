@@ -54,4 +54,3 @@ docker build -t jupyter/demo .
 ```
 docker build -t jupyter/minimal common/
 ```
-
