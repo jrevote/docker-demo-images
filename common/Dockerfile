@@ -47,7 +47,7 @@ RUN chown cerberus:cerberus /home/cerberus -R
 USER cerberus
 
 # Expose our custom setup to the installed ipython (for mounting by nginx)
-RUN cp /home/cerberus/.ipython/profile_default/static/custom/* /opt/conda/lib/python3.4/site-packages/IPython/html/static/custom/
+RUN cp /home/cerberus/.ipython/profile_default/static/custom/* /opt/conda/lib/python2.7/site-packages/IPython/html/static/custom/
 
 # Convert notebooks to the current format
 RUN find . -name '*.ipynb' -exec ipython nbconvert --to notebook {} --output {} \;
