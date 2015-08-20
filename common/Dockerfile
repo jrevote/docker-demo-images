@@ -1,12 +1,11 @@
 # Base image of the IPython/Jupyter notebook, with conda
 # Intended to be used in a tmpnb installation
 
-FROM debian:jessie
+FROM ubuntu:latest
 
 MAINTAINER Jerico Revote <jerico.revote@monash.edu>
 
-ENV DEBIAN_FRONTEND noninteractive
-
+USER root
 RUN apt-get update && apt-get install -y git vim wget build-essential python-dev ca-certificates bzip2 libsm6 && apt-get clean
 
 ENV CONDA_DIR /opt/conda
