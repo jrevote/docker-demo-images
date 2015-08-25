@@ -10,7 +10,7 @@ USER root
 RUN apt-get update && apt-get install -y gcc g++ gfortran && apt-get clean
 
 # Utilities
-RUN apt-get install -y vim screen wget curl aptitude mercurial git && apt-get clean
+RUN apt-get install -y vim screen wget curl aptitude mercurial git pandoc pandoc-data texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended && apt-get clean
 
 # Development Libraries
 RUN apt-get install -y libpng12-dev libxml2-dev libhdf5-dev libgeos-dev libgeos++-dev libproj-dev libxslt1-dev libglu1-mesa-dev libgl1-mesa-dev libosmesa6-dev libosmesa6 libpetsc3.4.2-dev libcurl3-dev freeglut3-dev libgl2ps-dev python-dev python-pip libudunits2-dev libgrib-api-dev libfreetype6-dev libncurses-dev libgrib-api-tools && apt-get clean
